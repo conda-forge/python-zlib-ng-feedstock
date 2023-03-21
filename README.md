@@ -1,11 +1,11 @@
-About python-zlib-ng
-====================
+About python-zlib-ng-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-zlib-ng-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pycompression/python-zlib-ng
 
 Package license: PSF-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-zlib-ng-feedstock/blob/main/LICENSE.txt)
 
 Summary: Drop-in replacement for zlib and gzip modules using zlib-ng
 
