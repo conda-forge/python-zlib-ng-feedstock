@@ -1,17 +1,17 @@
 {% set name = "zlib-ng" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "python-zlib-ng"  # To avoid confusion with zlib-ng proper
-  version: "{{ version }}"
+  name: python-zlib-ng    # To avoid confusion with zlib-ng proper
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 266854c9bc5f716493bed2d677c5a1aceab3ef7274fd63605fbb1d1fc8cf8e70
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 2b23707cb7e5bf27afd8422d290f68e82185af69741bde60914f18d16fb66e9b
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ZLIB_NG_LINK_DYNAMIC=true  # Forces a dynamic link against zlib-ng in conda-forge
 requirements:
@@ -31,13 +31,13 @@ test:
     - python -c "from zlib_ng import gzip_ng"
     - python -c "from zlib_ng import zlib_ng; zlib_ng.adler32(b'test')"
 about:
-  home: "https://github.com/pycompression/python-zlib-ng"
+  home: https://github.com/pycompression/python-zlib-ng
   license: PSF-2.0
   license_family: OTHER
   license_file: LICENSE
-  summary: "Drop-in replacement for zlib and gzip modules using zlib-ng"
-  doc_url: "https://python-zlib-ng.readthedocs.io"
-  dev_url: "https://github.com/pycompression/python-zlib-ng"
+  summary: Drop-in replacement for zlib and gzip modules using zlib-ng
+  doc_url: https://python-zlib-ng.readthedocs.io
+  dev_url: https://github.com/pycompression/python-zlib-ng
 
 extra:
   recipe-maintainers:
