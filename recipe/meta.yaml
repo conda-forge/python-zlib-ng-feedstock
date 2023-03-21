@@ -20,10 +20,10 @@ requirements:
   host:
     - pip
     - python
-    - zlib-ng >=2.0.6
+    - zlib-ng >=2.0.7
   run:
     - python
-    - zlib-ng >=2.0.6
+    - zlib-ng >=2.0.7
 test:
   imports:
     - zlib_ng
