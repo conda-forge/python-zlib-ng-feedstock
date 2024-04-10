@@ -1,5 +1,5 @@
 {% set name = "zlib-ng" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: python-zlib-ng    # To avoid confusion with zlib-ng proper
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 153183724143711c92bd243528b97fdd3b2426c778079498b882fce445a68421
+  sha256: 2541ae55744a72a4b57413ad05251ec4ef844245bf61509132e5bf925140b5ad
 
 build:
   number: 0
