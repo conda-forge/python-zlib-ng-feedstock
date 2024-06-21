@@ -26,4 +26,4 @@ zip_keys:
 - - c_stdlib_version
   - cdt_name
 zlib_ng:
-- '2.0'
+- '2.2'
