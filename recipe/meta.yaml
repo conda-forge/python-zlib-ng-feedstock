@@ -22,6 +22,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - pip
+    - setuptools
     - python
     - zlib-ng
     - versioningit >=1.1.0
