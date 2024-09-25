@@ -1,5 +1,5 @@
 {% set name = "zlib-ng" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: python-zlib-ng    # To avoid confusion with zlib-ng proper
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3322c4300253a054af3d3aafa2f3858dceee3a577810122ba55eff756bf35ef2
+  sha256: 32a46649e8efc21ddd74776a55366a8d8be4e3a95b93dc1f0ffe3880718990d9
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ZLIB_NG_LINK_DYNAMIC=true  # Forces a dynamic link against zlib-ng in conda-forge
