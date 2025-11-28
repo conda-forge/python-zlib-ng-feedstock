@@ -10,7 +10,7 @@ source:
   sha256: c753cea73f9e803c246e9bf01a59eb652897ed8a19334ada0f968394c7f61650
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ZLIB_NG_LINK_DYNAMIC=true  # Forces a dynamic link against zlib-ng in conda-forge
