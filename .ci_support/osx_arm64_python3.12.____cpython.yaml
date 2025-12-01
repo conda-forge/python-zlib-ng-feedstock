@@ -27,4 +27,4 @@ target_platform:
 zlib:
 - '1'
 zlib_ng:
-- '2.2'
+- '2.3'
