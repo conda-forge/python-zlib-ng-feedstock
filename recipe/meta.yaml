@@ -10,10 +10,13 @@ source:
   sha256: c753cea73f9e803c246e9bf01a59eb652897ed8a19334ada0f968394c7f61650
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ZLIB_NG_LINK_DYNAMIC=true  # Forces a dynamic link against zlib-ng in conda-forge
+    # Pin the version so setuptools-scm doesn't resolve the feedstock git tree
+    # in the build sandbox and fall back to 0.0.0 in the wheel metadata.
+    - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
@@ -25,7 +28,7 @@ requirements:
     - setuptools
     - python
     - zlib-ng
-    - versioningit >=1.1.0
+    - setuptools-scm >=8
   run:
     - python
 
