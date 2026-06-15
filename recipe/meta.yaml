@@ -38,6 +38,7 @@ test:
   commands:
     - python -c "from zlib_ng import gzip_ng"
     - python -c "from zlib_ng import zlib_ng; zlib_ng.adler32(b'test')"
+    - python -c "from importlib.metadata import version; assert version('zlib-ng') == '{{ version }}'"
 about:
   home: https://github.com/pycompression/python-zlib-ng
   license: PSF-2.0
